@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cửa Hàng Cầu Lông</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="/img/logo.png" alt="Khải Hoàng Logo">
+                </a>
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder="Bạn đang tìm gì...">
+                <button><i class="fa fa-search"></i></button>
+            </div>
+            <div class="header-info">
+                <div class="hotline">
+                    <i class="fa fa-phone"></i>
+                    <div>
+                        <span>Hotline</span>
+                        <strong>0123456789</strong>
+                    </div>
+                </div>
+                <div class="account">
+                    <i class="fa fa-user"></i>
+                    <div>
+                        <span>Đăng nhập</span>
+                        <strong>Tài khoản</strong>
+                    </div>
+                </div>
+                <div class="cart">
+                    <i class="fa fa-shopping-cart"></i>
+                    <span>Giỏ hàng</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <div class="nav-container">
+            <div class="category-menu">
+                <i class="fa fa-bars"></i>
+                <span>DANH MỤC SẢN PHẨM</span>
+            </div>
+
+            <ul>
+                <li><a href="san-pham.html">Sản phẩm</a></li>
+                <li><a href="vot-cau-long.html">Vợt cầu lông</a></li>
+                <li><a href="quan-ao-cau-long.html">Quần áo cầu lông</a></li>
+                <li><a href="giay-cau-long.html">Giày cầu lông</a></li>
+                <li><a href="balo-cau-long.html">Balo cầu lông</a></li>
+                <li><a href="lien-he.html">Liên hệ</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main data-api-endpoint="/api/products">
+        <section class="hero">
+            <img src="/img/banner/banner3.webp" alt="Hero Banner" class="hero-banner">
+        </section>
+
+        <section class="sub-banners">
+            <div class="sub-banner">
+                <img src="/img/banner/banner4.webp" alt="Outfit Banner">
+            </div>
+            <div class="sub-banner">
+                <img src="/img/banner/banner5.webp" alt="Racket Collection Banner">
+            </div>
+            <div class="sub-banner">
+                <img src="/img/banner/baneer4.webp" alt="Accessories Banner">
+            </div>
+        </section>
+
+        <section class="featured-products">
+            <h2>Sản phẩm nổi bật</h2>
+            <div class="product-grid">
+                <div class="product-card">
+
+                </div>
+                <div class="product-card">
+
+                </div>
+                <div class="product-card">
+
+                </div>
+                <div class="product-card">
+
+                </div>
+                <div class="product-card">
+
+                </div>
+                <div class="product-card">
+
+                </div>
+                <div class="product-card">
+
+                </div>
+                <div class="product-card">
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h4>Thông Tin</h4>
+                <ul>
+                    <li><a href="#">Về chúng tôi</a></li>
+                    <li><a href="#">Chính sách bảo mật</a></li>
+                    <li><a href="#">Điều khoản dịch vụ</a></li>
+                    <li><a href="#">Liên hệ</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Hỗ Trợ Khách Hàng</h4>
+                <ul>
+                    <li><a href="#">Câu hỏi thường gặp</a></li>
+                    <li><a href="#">Hướng dẫn mua hàng</a></li>
+                    <li><a href="#">Chính sách đổi trả</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Kết Nối Với Chúng Tôi</h4>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+                <h4>Đăng Kí Nhận Tin</h4>
+                <form class="subscribe-form">
+                    <input type="email" placeholder="Nhập email của bạn...">
+                    <button type="submit">Gửi</button>
+                </form>
+                <h4>Thông Tin Thanh Toán</h4>
+                <div class="payment-icons">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

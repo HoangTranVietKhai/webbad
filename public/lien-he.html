@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liên Hệ - Cửa Hàng Cầu Lông</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="images/logo.png" alt="Khải Hoàng Logo">
+                    </a>
+                </div>
+            <div class="search-bar">
+                <input type="text" placeholder="Bạn đang tìm gì...">
+                <button><i class="fa fa-search"></i></button>
+            </div>
+            <div class="header-info">
+                <div class="hotline">
+                    <i class="fa fa-phone"></i>
+                    <div>
+                        <span>Hotline</span>
+                        <strong>0123456789</strong>
+                    </div>
+                </div>
+                <div class="account">
+                    <i class="fa fa-user"></i>
+                    <div>
+                        <span>Đăng nhập</span>
+                        <strong>Tài khoản</strong>
+                    </div>
+                </div>
+                <div class="cart">
+                    <i class="fa fa-shopping-cart"></i>
+                    <span>Giỏ hàng</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <nav>
+    <div class="nav-container">
+        <div class="category-menu">
+            <i class="fa fa-bars"></i>
+            <span>DANH MỤC SẢN PHẨM</span>
+        </div>
+        <ul>
+            <li><a href="san-pham.html">Sản phẩm</a></li>
+            <li><a href="vot-cau-long.html" >Vợt cầu lông</a></li>
+            <li><a href="quan-ao-cau-long.html">Quần áo cầu lông</a></li>
+            <li><a href="giay-cau-long.html">Giày cầu lông</a></li>
+            <li><a href="balo-cau-long.html">Balo cầu lông</a></li>
+            <li><a href="lien-he.html" class="active">Liên hệ</a></li>
+        </ul>
+    </div>
+</nav>
+    <main>
+        <div class="page-header">
+            <h1>Liên Hệ Với Chúng Tôi</h1>
+        </div>
+        <div class="contact-container">
+            <div class="contact-info">
+                <h3>Thông Tin Cửa Hàng</h3>
+                <p><i class="fas fa-map-marker-alt"></i> <strong>Địa chỉ:</strong> 123 Đường Nguyễn Văn Linh, P. Tân Phong, Quận 7, TP. Hồ Chí Minh</p>
+                <p><i class="fas fa-phone"></i> <strong>Hotline:</strong> 0123.456.789</p>
+                <p><i class="fas fa-envelope"></i> <strong>Email:</strong> support@cauhanglegend.vn</p>
+                <p><i class="fas fa-clock"></i> <strong>Giờ làm việc:</strong> 08:00 - 21:00 (Tất cả các ngày)</p>
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.954035907488!2d106.67564341474857!3d10.738002492347644!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f62a90e5dbd%3A0x44304c1c8605c363!2zTmd1eeG7hW4gVsSDbiBMaW5oLCBRdeG6rW4gNywgSOG7kyBDaMOtIE1pbmgsIFZpZXRuYW0!5e0!3m2!1sen!2s!4v1684321098765!5m2!1sen!2s" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+            <div class="contact-form">
+                <h3>Gửi Thắc Mắc Cho Chúng Tôi</h3>
+                <form action="#" method="post">
+                    <div class="form-group">
+                        <label for="name">Họ và tên *</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Chủ đề</label>
+                        <input type="text" id="subject" name="subject">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Nội dung *</label>
+                        <textarea id="message" name="message" rows="6" required></textarea>
+                    </div>
+                    <button type="submit" class="btn-submit">Gửi Đi</button>
+                </form>
+            </div>
+        </div>
+    </main>
+    
+    <footer> </footer>
+    <script src="script.js"></script>
+</body>
+</html>
