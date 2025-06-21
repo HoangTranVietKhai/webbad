@@ -1,5 +1,3 @@
-// script.js
-
 document.addEventListener('DOMContentLoaded', function () {
 
     // --- PHẦN LOGIC HIỂN THỊ SẢN PHẨM ĐỘNG ---
@@ -59,9 +57,8 @@ async function fetchAndDisplayProducts(apiEndpoint, productGridElement) {
         if (!response.ok) {
             throw new Error(`Network response was not ok. Status: ${response.status}`);
         }
-        const products = await response.json();
 
-        // Xóa nội dung cũ (ví dụ: chữ "Loading...")
+        const products = await response.json();
         productGridElement.innerHTML = '';
 
         if (products.length === 0) {
@@ -73,18 +70,22 @@ async function fetchAndDisplayProducts(apiEndpoint, productGridElement) {
             const productCard = document.createElement('div');
             productCard.className = 'product-card';
 
-            // Format giá tiền cho đẹp
-            const formattedPrice = new Intl.NumberFormat('vi-VN', { style: 'currency', currency: 'VND' }).format(product.Price);
+            // Format giá tiền
+            const formattedPrice = new Intl.NumberFormat('vi-VN', {
+                style: 'currency',
+                currency: 'VND'
+            }).format(product.price);
 
-            // Chú ý: đường dẫn ảnh cần được cấu hình đúng
-            // Nếu bạn lưu ảnh trong public/images, thì đường dẫn sẽ là 'images/ten-anh.png'
-            const imageUrl = product.ImageUrl || '/img/placeholder.png'; // Dùng ảnh mặc định nếu không có ảnh
+            // Lấy đường dẫn ảnh hoặc ảnh mặc định
+            const imageUrl = product.image_url ? `/${product.image_url}` : '/img/placeholder.png';
 
+            // Tạo HTML sản phẩm
             productCard.innerHTML = `
-                <img src="${imageUrl}" alt="${product.ProductName}">
-                <h3>${product.ProductName}</h3>
+                <img src="${imageUrl}" alt="${product.name}">
+                <h3>${product.name}</h3>
                 <p class="price">${formattedPrice}</p>
             `;
+
             productGridElement.appendChild(productCard);
         });
 

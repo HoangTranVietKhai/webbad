@@ -1,22 +1,24 @@
-// src/controllers/productController.js
-
 const { sql, poolPromise } = require('../config/db');
 
-// Hàm này để lấy TẤT CẢ sản phẩm (dùng cho trang san-pham.html)
+// ✅ Sửa: Hàm lấy TỐI ĐA 10 sản phẩm cho trang chủ hoặc trang nổi bật
 const getProducts = async (req, res) => {
     try {
         const pool = await poolPromise;
-        const result = await pool.request().query('SELECT * FROM Products');
+
+        const result = await pool.request().query(`
+            SELECT TOP 8 * FROM Products ORDER BY Created_at DESC
+        `);
+
         res.json(result.recordset);
     } catch (err) {
         res.status(500).send(err.message);
     }
 };
 
-// MỚI: Hàm này để lấy sản phẩm THEO DANH MỤC
+// ✅ Không cần sửa hàm này nếu bạn vẫn muốn trả toàn bộ theo danh mục
 const getProductsByCategory = async (req, res) => {
     try {
-        const categorySlug = req.params.categorySlug; // Lấy slug từ URL
+        const categorySlug = req.params.categorySlug;
         const pool = await poolPromise;
 
         const result = await pool.request()
@@ -35,5 +37,5 @@ const getProductsByCategory = async (req, res) => {
 
 module.exports = {
     getProducts,
-    getProductsByCategory // Xuất hàm mới
+    getProductsByCategory
 };
